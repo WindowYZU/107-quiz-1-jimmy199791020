@@ -5,6 +5,10 @@
  */
 package lendle.courses.wp.quiz_comboboxandslider;
 
+import javafx.scene.control.ComboBox;
+import javax.swing.JComboBox;
+import javax.swing.JSlider;
+
 /**
  *
  * @author lendle
@@ -36,6 +40,26 @@ public class NewJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jSlider1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSlider1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider1StateChanged(evt);
+            }
+        });
 
         jLabel1.setText("combobox 裡面放0，10，20，30......100");
 
@@ -75,6 +99,26 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        JComboBox combo=new JComboBox();
+        for(int i=0;i<=100;i++){
+            comboBox.addItem(""+i);
+        }
+        combo.setModel(new DefaultComboBoxModel(data));
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+        // TODO add your handling code here:
+        
+        }
+        
+    }//GEN-LAST:event_jSlider1StateChanged
+
+    private void jSlider1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSlider1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSlider1AncestorAdded
 
     /**
      * @param args the command line arguments
