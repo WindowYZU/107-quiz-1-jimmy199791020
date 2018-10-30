@@ -6,6 +6,7 @@
 package lendle.courses.wp.quiz_comboboxandslider;
 
 import javafx.scene.control.ComboBox;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JSlider;
 
@@ -106,7 +107,7 @@ public class NewJFrame extends javax.swing.JFrame {
         for(int i=0;i<=100;i++){
             comboBox.addItem(""+i);
         }
-        combo.setModel(new DefaultComboBoxModel(data));
+        combo.setModel(new DefaultComboBoxModel());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
