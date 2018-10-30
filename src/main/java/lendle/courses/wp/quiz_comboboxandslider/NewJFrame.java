@@ -112,7 +112,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         // TODO add your handling code here:
-        
+        DefaultComboBoxModel model=(DefaultComboBoxModel)JComboBox.getDefaultLocale()
+                model.addElement(JComboBox.getDefaultLocale());
+                jComboBox.updateUI();
         }
         
     }//GEN-LAST:event_jSlider1StateChanged
